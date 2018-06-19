@@ -12,7 +12,6 @@ class ArticleAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     form = forms.CategoryForm
 
-
 @admin.register(models.Tag)
 class TagAdmin(admin.ModelAdmin):
     form = forms.TagForm

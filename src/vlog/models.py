@@ -18,7 +18,8 @@ class Publication(BaseModel):
         max_length=150,
         unique=True,
         blank=True,
-        verbose_name=_('Slug')
+        verbose_name=_('Slug'),
+        help_text=_('Do not edit field manually')
     )
 
     def __str__(self):
