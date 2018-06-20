@@ -38,6 +38,11 @@ class Category(Publication):
         null=True
     )
 
+    image = models.CharField(
+        max_length=200,
+        null = True
+    )
+
     class Meta:
         db_table = 'category'
         verbose_name = _('Category')
@@ -66,6 +71,19 @@ class Article(Publication):
         verbose_name=_('Category'),
         on_delete=models.SET_NULL,
         null=True
+    )
+
+    image = models.CharField(
+        max_length=200,
+        null=True
+    )
+
+    publication_date = models.DateTimeField(
+        null=True
+    )
+
+    visible = models.BooleanField(
+        default=True
     )
 
     class Meta:
