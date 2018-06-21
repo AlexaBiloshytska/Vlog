@@ -10,7 +10,11 @@
     <body>
         {% block navbar %}
             {% include 'core/navbar.tpl' %}
-        {% endblock %}
+         {% endblock %}
+    {% block breadcrumbs %}
+        <a href="/home">Влог</a>
+    {% endblock %}
+
 
         <br>
         <div class="container-fluid">

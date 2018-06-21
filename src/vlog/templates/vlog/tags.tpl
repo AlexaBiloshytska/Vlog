@@ -1,7 +1,9 @@
 {% extends 'core/base.tpl' %}
 
 {% block title %}Tags{% endblock %}
-
+{% block breadcrumbs %}
+    {{ super() }}<a href="/tags">Tags</a>
+{% endblock %}
 {% block content %}
     <h2>Теги:</h2>
 

@@ -1,6 +1,9 @@
  {% extends 'core/base.tpl' %}
 
 {% block title %}Category{% endblock %}
+{% block breadcrumbs %}
+    {{ super() }}
+{% endblock %}
 
 {% block content %}
     <h3>Категория: {{ category.title }}</h3>

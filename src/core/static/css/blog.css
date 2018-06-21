@@ -1,9 +1,13 @@
 footer.sticky-footer {
-  //position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 56px;
   background-color: #e9ecef;
   line-height: 55px;
+}
+
+.container-fluid {
+    min-height: 400px;
 }

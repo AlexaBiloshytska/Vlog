@@ -2,6 +2,7 @@
 
 {% block title %}Articles{% endblock %}
 
+
 {% block content %}
     <h3>Most commented articles in category: {{ category.title }}</h3>
 
