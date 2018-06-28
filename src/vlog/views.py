@@ -138,12 +138,14 @@ class TagView(BaseView):
         context = super().get_context_data(**kwargs)
 
         tag = Tag.objects.get(slug=kwargs.get('slug_tag'))
-        articles = Article.objects \
-            .annotate(comments_count=Count('comments')) \
-            .filter(tags=tag.id) \
-            .select_related('category') \
-            .values('tags', 'title', 'category__title', 'category__slug', 'slug') \
-            .order_by('-comments_count')
+        articles = Article.objects.annotate(
+            comments_count=Count('comments')
+        ).filter(
+            tags=tag.id
+        ) .select_related('category'
+        ) .values('tags', 'title', 'category__title', 'category__slug', 'slug'
+        ).order_by('-comments_count'
+        )
 
         crumbs = [
            {'url': reverse('vlog:index'), 'title': _('Home')},

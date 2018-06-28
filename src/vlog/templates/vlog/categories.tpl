@@ -17,18 +17,18 @@
 
     <div class="pagination">
         <span class="step-links">
-            {% if categories.has_previous %}
+            {% if categories.has_previous() %}
                 <a href="?page=1">&laquo; first</a>
-                <a href="?page={{ categories.previous_page_number }}&q={{ request.GET.q1 }}">previous</a>
+                <a href="?page={{ categories.previous_page_number() }}&q={{ request.GET.q1 }}">previous</a>
             {% endif %}
 
             <span class="current">
                 Page {{ categories.number }} of {{ categories.paginator.num_pages }}.
             </span>
 
-            {% if categories.has_next %}
-                <a href="?page={{ categories.next_page_number }}&q1={{ request.GET.q1 }}">next</a>
-                <a href="?page={{ categories.paginator.num_pages }}&q1={{ request.GET.q1 }}">last &raquo;</a>
+            {% if categories.has_next() %}
+                <a href="?page={{ categories.next_page_number()}}">next</a>
+                <a href="?page={{ categories.paginator.num_pages}}&q1={{ request.GET.q1 }}">last &raquo;</a>
             {% endif %}
         </span>
     </div>
