@@ -1,8 +1,10 @@
- {% extends 'core/base.tpl' %}
+{% extends "core/base.tpl" %}
+{% import 'core/macros.tpl' as macro %}
 
-{% block title %}Category{% endblock %}
-{% block breadcrumbs %}
-    {{ super() }}
+{% block title %}{{ category.title }}{% endblock %}
+
+{% block breadcrumb %}
+  {{ macro.breadcrumps(crumbs, category.title) }}
 {% endblock %}
 
 {% block content %}

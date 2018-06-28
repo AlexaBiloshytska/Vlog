@@ -25,9 +25,6 @@
         <a class="nav-link" href="/tags">Tags</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Login/Logout</a>
-      </li>
-      <li class="nav-item">
       </li>
 
       </ul>

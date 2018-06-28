@@ -1,9 +1,10 @@
 {% extends 'core/base.tpl' %}
+{% import 'core/macros.tpl' as macro %}
 
-{% block title %}Tags{% endblock %}
-{% block breadcrumbs %}
-    {{ super() }}<a href="/tags">Tags</a>
+{% block breadcrumb %}
+  {{ macro.breadcrumps(crumbs, 'Tags') }}
 {% endblock %}
+
 {% block content %}
     <h2>Теги:</h2>
 
@@ -15,10 +16,11 @@
 
         <ul>
         {% for article in articles if article.tags == tag.id and count[0] > 0 %}
-            <li><a href="/articles/{{ article.slug }}/">{{ article.title }}</a></li>
+            <li><a href="/article/{{ article.slug }}/">{{ article.title }}</a></li>
             {% if count.append(count.pop() - 1) %} {% endif %}
         {% endfor %}
         </ul>
     {% endfor %}
     <br>
 {% endblock %}
+

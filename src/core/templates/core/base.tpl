@@ -11,12 +11,14 @@
         {% block navbar %}
             {% include 'core/navbar.tpl' %}
          {% endblock %}
-    {% block breadcrumbs %}
-        <a href="/home">Влог</a>
-    {% endblock %}
 
+         <ol class="breadcrumb my-4">
+            {% block breadcrumb %}
+            {% endblock %}
+           </ol>
 
         <br>
+
         <div class="container-fluid">
             {% block content %}
             {% endblock %}

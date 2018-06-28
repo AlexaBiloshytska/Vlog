@@ -1,6 +1,12 @@
-{% extends 'core/base.tpl' %}
 
-{% block title %}Tags{% endblock %}
+{% extends "core/base.tpl" %}
+{% import 'core/macros.tpl' as macro %}
+
+{% block title %}{{ tag.title }}{% endblock %}
+
+{% block breadcrumb %}
+  {{ macro.breadcrumps(crumbs, tag.title) }}
+{% endblock %}
 
 {% block content %}
     <h3><a href="tags/">Теги:</a></h3>

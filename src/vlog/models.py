@@ -1,9 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.utils.translation import gettext as _
-
 from ckeditor.fields import RichTextField
-
 from core.models import BaseModel
 
 
@@ -73,9 +71,9 @@ class Article(Publication):
         null=True
     )
 
-    image = models.CharField(
-        max_length=200,
-        null=True
+    image = models.ImageField(
+        null=True,
+        blank=True
     )
 
     publication_date = models.DateTimeField(

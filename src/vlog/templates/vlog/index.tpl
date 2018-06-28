@@ -23,7 +23,7 @@
     <ul>
     {% for article in articles %}
         <li>
-            <a href="articles/{{ article.slug }}/">{{ article.title }}</a>
+            <a href="/categories/{{article.category.slug}}/articles/{{ article.slug }}/">{{ article.title }}</a>
         </li>
     {% endfor %}
     </ul>
