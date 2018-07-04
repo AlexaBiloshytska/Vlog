@@ -5,6 +5,11 @@ from django.core.paginator import Paginator
 from django.urls import reverse
 from django.utils.translation import gettext as _
 
+from django.shortcuts import render
+import requests
+from django.conf.urls import url, include
+from rest_framework import routers, serializers, viewsets
+
 class IndexView(BaseView):
     template_name = 'vlog/index.tpl'
 

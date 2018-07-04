@@ -27,4 +27,3 @@ urlpatterns = [
     re_path(r"^tags/(?P<slug_tag>[\w'-]+)/$",
             views.TagView.as_view(), name='tag'),
 ]
-
